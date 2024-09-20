@@ -4,8 +4,10 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.*;
 
 @Entity
+@Table(name = "mesa")
 public class Mesas {
 @Id
 @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -15,7 +17,7 @@ public class Mesas {
 
     // Constructor vacío requerido por JPA
     public Mesas() {
-        // Constructor vacío
+
     }
 
     // Constructor con parámetros
