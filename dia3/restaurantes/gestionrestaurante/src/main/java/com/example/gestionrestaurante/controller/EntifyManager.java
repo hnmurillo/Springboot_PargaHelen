@@ -70,24 +70,24 @@ public class EntifyManager {
         return restaurantManager.saveMesas(mesas);
     }
 
-    //Obtener un plato por ID
+    //Obtener un mesas por ID
     //localhost:8080/api/plato/id con verbo GET
     @GetMapping("/Mesas/{id}")
     public Optional<Mesas> getMesasById(@PathVariable Long id){
         return restaurantManager.getMesasById(id);
     }
 
-    //Actualizar un plato por ID
+    //Actualizar un Mesas por ID
     //localhost:8080/api/plato/id con verbo PUT
     @PutMapping("/Mesas/{id}")
     public Mesas actualizarMesas(@PathVariable long id,@RequestBody Mesas mesas) {
         return restaurantManager.actualizarMesa(id, mesas);
     }
 
-    //Eliminar un plato por ID
+    //Eliminar un mesaspor ID
     //localhost:8080/api/plato/id con verbo DELETE
 
-    @DeleteMapping("/plato/{id}")
+    @DeleteMapping("/Mesa/{id}")
     public void eliminarMesa(@PathVariable long id){
         restaurantManager.eliminarMesa(id);
     }
