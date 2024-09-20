@@ -55,7 +55,7 @@ public class EntifyManager {
     }
 
     //Obtener todo los mesa
-    //localhost:8080/api/Plato verbo GET
+    //localhost:8080/api/mesa verbo GET
 
     @GetMapping("/Mesa")
     public List<Mesas> getAllMesas(){
@@ -64,28 +64,28 @@ public class EntifyManager {
 
     //Mesas
     //Guardar un Mesas
-    //localhost:8080/api/mesas con verbo POST
+    //localhost:8080/api/mesa con verbo POST
     @PostMapping("/Mesa")
     public Mesas saveMesas ( @RequestBody Mesas mesas){
         return restaurantManager.saveMesas(mesas);
     }
 
     //Obtener un mesas por ID
-    //localhost:8080/api/plato/id con verbo GET
+    //localhost:8080/api/mesa/id con verbo GET
     @GetMapping("/Mesas/{id}")
     public Optional<Mesas> getMesasById(@PathVariable Long id){
         return restaurantManager.getMesasById(id);
     }
 
     //Actualizar un Mesas por ID
-    //localhost:8080/api/plato/id con verbo PUT
+    //localhost:8080/api/mesa/id con verbo PUT
     @PutMapping("/Mesas/{id}")
     public Mesas actualizarMesas(@PathVariable long id,@RequestBody Mesas mesas) {
         return restaurantManager.actualizarMesa(id, mesas);
     }
 
-    //Eliminar un mesaspor ID
-    //localhost:8080/api/plato/id con verbo DELETE
+    //Eliminar un mesa por ID
+    //localhost:8080/api/mesa/id con verbo DELETE
 
     @DeleteMapping("/Mesa/{id}")
     public void eliminarMesa(@PathVariable long id){
